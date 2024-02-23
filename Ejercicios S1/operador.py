@@ -15,4 +15,5 @@ for operador in operadores:
     sueldo_por_hora = operador["sueldo_por_hora"]
     horas_trabajadas = operador["horas_trabajadas"]
     sueldo_a_pagar = calcular_sueldo(nombre, sueldo_por_hora, horas_trabajadas)
+    
     print(f"El operador {nombre} debe recibir un sueldo de ${sueldo_a_pagar}.")
