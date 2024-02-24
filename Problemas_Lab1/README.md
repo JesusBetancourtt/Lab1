@@ -119,8 +119,8 @@ En caso de que el robot llegue a su destino final deberá imprimir el mapa, con 
 obstáculos de la siguiente forma X obstáculo o libre
 
 o o o X o
-
 o o o o o
+
 - o o o o X
 - o o o o o
 - o X X X o
