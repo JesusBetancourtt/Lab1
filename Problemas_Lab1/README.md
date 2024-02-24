@@ -1,5 +1,5 @@
 # Introducción a Python
-Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Es conocido por su sintaxis clara y legible, lo que facilita el aprendizaje y la escritura de código.
+Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Es conocido por su sintaxis clara y legible, lo que facilita el aprendizaje y la escritura de código. A continuación, se presenta una breve descripción de algunos conceptos fundamentales vistos en clases Diseño de Sistemas Robóticos.
 
 ## Tipos de Variables
 - **Enteros (int):** Representan números enteros, por ejemplo, `1`, `10`, `-5`.
@@ -73,4 +73,4 @@ La estructura `if` se utiliza para ejecutar un bloque de código si una condici�
 - **Comparación:** `==, !=, <, >, <=, >=` (igual, no igual, menor, mayor, menor o igual, mayor o igual).
 - **Lógicos:** `and, or, not` (y, o, no).
 
-Estos conceptos proporcionan una base sólida para comenzar a programar en Python. Es importante practicar con ejercicios y proyectos para fortalecer la comprensión de estos elementos.
+Estos conceptos proporcionan una base sólida para comenzar a programar en Python. 
