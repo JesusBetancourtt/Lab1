@@ -74,3 +74,56 @@ La estructura `if` se utiliza para ejecutar un bloque de código si una condici�
 - **Lógicos:** `and, or, not` (y, o, no).
 
 Estos conceptos proporcionan una base sólida para comenzar a programar en Python. 
+
+#Problemas a resolver
+##Problema 1
+Escribir un programa que lea un entero positivo “n” introducido por el usuario y después muestre
+en pantalla la suma de todos los enteros desde 1 hasta n . La suma de los primeros enteros
+positivos puede ser calculada de la siguiente forma:
+
+##Problema 2
+Escribir un programa que pregunte al usuario por el número de horas trabajadas y el costo por hora.
+Después debe mostrar por pantalla la paga que le corresponde.
+
+##Problema 3
+Crea una lista de nombre + sueldo por hora + horas trabajadas de al menos seis operadores.
+Imprime el nombre y el sueldo a pagar de cada operador
+
+##Problema 4
+• Crea una lista llamada numeros que contenga al menos 10 números.
+• Calcula el promedio de los números pares y el producto de los números impares.
+• Imprime los resultados.
+
+##Problema 5
+Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generar
+un número aleatorio entre 1 y 10, y el usuario debe intentar adivinarlo. El programa debe
+proporcionar pistas si el número ingresado por el usuario es demasiado alto o bajo. El bucle while
+debe continuar hasta que el usuario adivine correctamente. Al final se debe imprimir en cuantos
+intentos el usuario logró adivinar el número.
+Pista:
+import random
+Generar un número aleatorio entre 1 y 10
+numero_secreto = random.randint(1, 10)
+
+
+##Problema 6(Robot explorador)
+El programa debe generar una matriz de al menos 5x5.
+El robot inicia su camino en la posición (0,0) de la matriz y debe salir en la posición (4,4) o la
+máxima posición si se cambia el tamaño de matriz.
+El numero y la posición de los obstáculos es aleatoria.
+El robot solo puede avanzar, girar a la izquierda o a la derecha para buscar un camino libre, en el
+eventual caso que el robot no pueda salir debe imprimir en pantalla “Imposible llegar al destino”
+En caso de que el robot llegue a su destino final deberá imprimir el mapa, con los espacios libres y
+obstáculos de la siguiente forma X obstáculo o libre
+o o o X o
+o o o o o
+o o o o X
+o o o o o
+o X X X o
+Deberá imprimir también la ruta que siguió.
+Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas
+Pista:
+Flecha hacia arriba: ↑ (U+2191)
+Flecha hacia abajo: ↓ (U+2193)
+Flecha hacia la izquierda: ← (U+2190)
+Flecha hacia la derecha: → (U+2192
