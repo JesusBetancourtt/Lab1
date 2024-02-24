@@ -100,7 +100,8 @@ un número aleatorio entre 1 y 10, y el usuario debe intentar adivinarlo. El pro
 proporcionar pistas si el número ingresado por el usuario es demasiado alto o bajo. El bucle while
 debe continuar hasta que el usuario adivine correctamente. Al final se debe imprimir en cuantos
 intentos el usuario logró adivinar el número.
-- Pista:
+
+Pista:
 ```Python
 import random
 Generar un número aleatorio entre 1 y 10
@@ -119,14 +120,19 @@ En caso de que el robot llegue a su destino final deberá imprimir el mapa, con 
 obstáculos de la siguiente forma X obstáculo o libre
 
 o o o X o
+
 o o o o o
 
-- o o o o X
-- o o o o o
-- o X X X o
+o o o o X
+
+o o o o o
+
+o X X X o
+
 Deberá imprimir también la ruta que siguió.
-- Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas
-- Pista:
+Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas
+
+Pista:
 - Flecha hacia arriba: ↑ (U+2191)
 - Flecha hacia abajo: ↓ (U+2193)
 - Flecha hacia la izquierda: ← (U+2190)
