@@ -1,7 +1,4 @@
-```
 # Introducci처n a Python
-
-## Descripci처n General
 Python es un lenguaje de programaci처n de alto nivel, interpretado y de prop처sito general. Es conocido por su sintaxis clara y legible, lo que facilita el aprendizaje y la escritura de c처digo.
 
 ## Tipos de Variables
@@ -77,4 +74,3 @@ La estructura `if` se utiliza para ejecutar un bloque de c처digo si una condici�
 - **L처gicos:** `and, or, not` (y, o, no).
 
 Estos conceptos proporcionan una base s처lida para comenzar a programar en Python. Es importante practicar con ejercicios y proyectos para fortalecer la comprensi처n de estos elementos.
-```
