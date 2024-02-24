@@ -90,9 +90,9 @@ Crea una lista de nombre + sueldo por hora + horas trabajadas de al menos seis o
 Imprime el nombre y el sueldo a pagar de cada operador
 
 ## Problema 4
-- • Crea una lista llamada numeros que contenga al menos 10 números.
-- • Calcula el promedio de los números pares y el producto de los números impares.
-- • Imprime los resultados.
+- Crea una lista llamada numeros que contenga al menos 10 números.
+- Calcula el promedio de los números pares y el producto de los números impares.
+- Imprime los resultados.
 
 ## Problema 5
 Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generar
