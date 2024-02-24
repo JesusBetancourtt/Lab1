@@ -117,8 +117,10 @@ El robot solo puede avanzar, girar a la izquierda o a la derecha para buscar un 
 eventual caso que el robot no pueda salir debe imprimir en pantalla “Imposible llegar al destino”
 En caso de que el robot llegue a su destino final deberá imprimir el mapa, con los espacios libres y
 obstáculos de la siguiente forma X obstáculo o libre
-- o o o X o
-- o o o o o
+
+o o o X o
+
+o o o o o
 - o o o o X
 - o o o o o
 - o X X X o
