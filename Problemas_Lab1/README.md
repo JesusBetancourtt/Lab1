@@ -75,26 +75,26 @@ La estructura `if` se utiliza para ejecutar un bloque de código si una condici�
 
 Estos conceptos proporcionan una base sólida para comenzar a programar en Python. 
 
-#Problemas a resolver
-##Problema 1
+# Problemas a resolver
+## Problema 1
 Escribir un programa que lea un entero positivo “n” introducido por el usuario y después muestre
 en pantalla la suma de todos los enteros desde 1 hasta n . La suma de los primeros enteros
 positivos puede ser calculada de la siguiente forma:
 
-##Problema 2
+## Problema 2
 Escribir un programa que pregunte al usuario por el número de horas trabajadas y el costo por hora.
 Después debe mostrar por pantalla la paga que le corresponde.
 
-##Problema 3
+## Problema 3
 Crea una lista de nombre + sueldo por hora + horas trabajadas de al menos seis operadores.
 Imprime el nombre y el sueldo a pagar de cada operador
 
-##Problema 4
+## Problema 4
 • Crea una lista llamada numeros que contenga al menos 10 números.
 • Calcula el promedio de los números pares y el producto de los números impares.
 • Imprime los resultados.
 
-##Problema 5
+## Problema 5
 Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generar
 un número aleatorio entre 1 y 10, y el usuario debe intentar adivinarlo. El programa debe
 proporcionar pistas si el número ingresado por el usuario es demasiado alto o bajo. El bucle while
@@ -106,7 +106,7 @@ Generar un número aleatorio entre 1 y 10
 numero_secreto = random.randint(1, 10)
 
 
-##Problema 6(Robot explorador)
+## Problema 6(Robot explorador)
 El programa debe generar una matriz de al menos 5x5.
 El robot inicia su camino en la posición (0,0) de la matriz y debe salir en la posición (4,4) o la
 máxima posición si se cambia el tamaño de matriz.
