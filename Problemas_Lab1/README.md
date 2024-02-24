@@ -90,9 +90,9 @@ Crea una lista de nombre + sueldo por hora + horas trabajadas de al menos seis o
 Imprime el nombre y el sueldo a pagar de cada operador
 
 ## Problema 4
-• Crea una lista llamada numeros que contenga al menos 10 números.
-• Calcula el promedio de los números pares y el producto de los números impares.
-• Imprime los resultados.
+- • Crea una lista llamada numeros que contenga al menos 10 números.
+- • Calcula el promedio de los números pares y el producto de los números impares.
+- • Imprime los resultados.
 
 ## Problema 5
 Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generar
@@ -100,10 +100,12 @@ un número aleatorio entre 1 y 10, y el usuario debe intentar adivinarlo. El pro
 proporcionar pistas si el número ingresado por el usuario es demasiado alto o bajo. El bucle while
 debe continuar hasta que el usuario adivine correctamente. Al final se debe imprimir en cuantos
 intentos el usuario logró adivinar el número.
-Pista:
+- Pista:
+```Python
 import random
 Generar un número aleatorio entre 1 y 10
 numero_secreto = random.randint(1, 10)
+```
 
 
 ## Problema 6(Robot explorador)
@@ -115,15 +117,15 @@ El robot solo puede avanzar, girar a la izquierda o a la derecha para buscar un 
 eventual caso que el robot no pueda salir debe imprimir en pantalla “Imposible llegar al destino”
 En caso de que el robot llegue a su destino final deberá imprimir el mapa, con los espacios libres y
 obstáculos de la siguiente forma X obstáculo o libre
-o o o X o
-o o o o o
-o o o o X
-o o o o o
-o X X X o
+- o o o X o
+- o o o o o
+- o o o o X
+- o o o o o
+- o X X X o
 Deberá imprimir también la ruta que siguió.
-Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas
-Pista:
-Flecha hacia arriba: ↑ (U+2191)
-Flecha hacia abajo: ↓ (U+2193)
-Flecha hacia la izquierda: ← (U+2190)
-Flecha hacia la derecha: → (U+2192
+- Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas
+- Pista:
+- Flecha hacia arriba: ↑ (U+2191)
+- Flecha hacia abajo: ↓ (U+2193)
+- Flecha hacia la izquierda: ← (U+2190)
+- Flecha hacia la derecha: → (U+2192
