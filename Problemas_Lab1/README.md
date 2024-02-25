@@ -146,7 +146,7 @@ for operador in operadores:
     print(f"El operador {nombre} debe recibir un sueldo de ${sueldo_a_pagar}.")
 ```
 
-Este código en Python gestiona la información de varios operadores, cada uno con datos como su nombre, sueldo por hora y horas trabajadas. A través de una función llamada `calcular_sueldo`, se calcula el sueldo para cada operador multiplicando el sueldo por hora y las horas trabajadas. Posteriormente, se itera sobre la lista de operadores, se utiliza la función para calcular el sueldo de cada uno, y se imprime en la consola un mensaje indicando el sueldo que debe recibir cada operador.
+Este código gestiona la información de varios operadores, cada uno con datos como su nombre, sueldo por hora y horas trabajadas. A través de una función llamada `calcular_sueldo`, se calcula el sueldo para cada operador multiplicando el sueldo por hora y las horas trabajadas. Posteriormente, se itera sobre la lista de operadores, se utiliza la función para calcular el sueldo de cada uno, y se imprime en la consola un mensaje indicando el sueldo que debe recibir cada operador.
 
 ## Problema 4
 - Crea una lista llamada numeros que contenga al menos 10 números.
