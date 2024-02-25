@@ -78,8 +78,18 @@ Estos conceptos proporcionan una base sólida para comenzar a programar en Pytho
 # Problemas a resolver
 ## Problema 1
 Escribir un programa que lea un entero positivo “n” introducido por el usuario y después muestre
-en pantalla la suma de todos los enteros desde 1 hasta n . La suma de los primeros enteros
-positivos puede ser calculada de la siguiente forma:
+en pantalla la suma de todos los enteros desde 1 hasta n .
+
+```python
+# Solicita al usuario que introduzca un número entero y lo guarda en la variable 'n'
+n = int(input("Introduce un número entero: "))
+
+# Calcula la suma de todos los números anteriores hasta el número ingresado por el usuario
+suma = n * (n + 1) / 2
+
+# Imprime el resultado de la suma
+print("La suma de todos los numeros anteriores hasta tu numero escogido es " + str(suma))
+```
 
 ## Problema 2
 Escribir un programa que pregunte al usuario por el número de horas trabajadas y el costo por hora.
