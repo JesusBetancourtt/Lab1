@@ -91,7 +91,7 @@ suma = n * (n + 1) / 2
 print("La suma de todos los numeros anteriores hasta tu numero escogido es " + str(suma))
 ```
 
-Este código en Python tiene como objetivo principal calcular la suma de todos los números naturales desde 1 hasta un número entero proporcionado por el usuario. Comienza solicitando al usuario que ingrese un número entero, luego utiliza la fórmula de la suma de una serie aritmética para calcular la suma. Finalmente, imprime el resultado junto con un mensaje informando al usuario sobre la suma de los números.
+Este código tiene como objetivo principal calcular la suma de todos los números naturales desde 1 hasta un número entero proporcionado por el usuario. Comienza solicitando al usuario que ingrese un número entero, luego utiliza la fórmula de la suma de una serie aritmética para calcular la suma. Finalmente, imprime el resultado junto con un mensaje informando al usuario sobre la suma de los números.
 
 ## Problema 2
 Escribir un programa que pregunte al usuario por el número de horas trabajadas y el costo por hora.
