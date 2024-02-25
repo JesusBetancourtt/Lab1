@@ -153,6 +153,37 @@ Este código en Python gestiona la información de varios operadores, cada uno c
 - Calcula el promedio de los números pares y el producto de los números impares.
 - Imprime los resultados.
 
+```Python
+# Lista de números proporcionada
+numeros = [2, 7, 14, 5, 8, 11, 20, 3, 6, 9]
+
+# Inicialización de variables para realizar cálculos
+sum_pares = 0
+count_pares = 0
+producto_impares = 1
+
+# Itera sobre la lista de números
+for num in numeros:
+    # Verifica si el número es par
+    if num % 2 == 0:
+        # Si es par, se suma al total de pares y se incrementa el contador
+        sum_pares += num
+        count_pares += 1
+    else:
+        # Si es impar, se multiplica al producto de impares
+        producto_impares *= num
+
+# Calcula el promedio de los números pares
+promedio_pares = sum_pares / count_pares if count_pares > 0 else 0
+
+# Imprime la lista de números, el promedio de números pares y el producto de números impares
+print(f"Lista de números: {numeros}")
+print(f"Promedio de números pares: {promedio_pares}")
+print(f"Producto de números impares: {producto_impares}")
+```
+
+Este código en Python procesa una lista de números, calculando el promedio de los números pares, así como el producto de los números impares. Utiliza variables como sum_pares, count_pares, y producto_impares para llevar a cabo estos cálculos. El código finalmente imprime la lista original de números, el promedio de los números pares y el producto de los números impares.
+
 ## Problema 5
 Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generar
 un número aleatorio entre 1 y 10, y el usuario debe intentar adivinarlo. El programa debe
@@ -167,6 +198,46 @@ Generar un número aleatorio entre 1 y 10
 numero_secreto = random.randint(1, 10)
 ```
 
+```Python
+# Importa el módulo 'random' para generar un número aleatorio
+import random
+
+# Genera un número aleatorio entre 1 y 10
+numero_secreto = random.randint(1, 10)
+
+# Inicializa el contador de intentos en 0
+intentos = 0
+
+# Imprime un mensaje de bienvenida al juego
+print("Bienvenido al juego de adivinanzas. Adivina el número secreto entre 1 y 10.")
+
+# Inicia un bucle while que continuará hasta que se adivine el número secreto
+while True:
+    try:
+        # Solicita al usuario que ingrese su adivinanza y la convierte a un número entero
+        guess = int(input("Ingresa tu adivinanza: "))
+    except ValueError:
+        # Captura la excepción si el usuario no ingresa un número válido
+        print("Por favor, ingresa un número válido.")
+        continue
+
+    # Incrementa el contador de intentos en cada iteración
+    intentos += 1
+
+    # Compara la adivinanza del usuario con el número secreto
+    if guess == numero_secreto:
+        # Imprime un mensaje de felicitaciones si la adivinanza es correcta y termina el juego
+        print(f"¡Felicidades! Adivinaste el número secreto en {intentos} intentos.")
+        break
+    elif guess < numero_secreto:
+        # Indica al usuario que el número es demasiado bajo si la adivinanza es menor que el número secreto
+        print("El número es demasiado bajo. ¡Intenta de nuevo!")
+    else:
+        # Indica al usuario que el número es demasiado alto si la adivinanza es mayor que el número secreto
+        print("El número es demasiado alto. ¡Intenta de nuevo!")
+```
+
+El programa selecciona aleatoriamente un número secreto entre 1 y 10 e indica al usuario intentar adivinar el número secreto mediante un numero proporcionado. El programa verifica si la entrada es un número válido y proporciona mensajes informativos, como "demasiado bajo" o "demasiado alto", según la relación con el número secreto. El juego continúa hasta que el usuario adivina correctamente el número, momento en el cual se muestra un mensaje de felicitación junto con la cantidad de intentos realizados. El código utiliza un bucle while True para mantener el juego en curso hasta que se rompe explícitamente cuando el usuario adivina correctamente.
 
 ## Problema 6(Robot explorador)
 El programa debe generar una matriz de al menos 5x5.
