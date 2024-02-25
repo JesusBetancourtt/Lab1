@@ -91,9 +91,27 @@ suma = n * (n + 1) / 2
 print("La suma de todos los numeros anteriores hasta tu numero escogido es " + str(suma))
 ```
 
+Este código en Python tiene como objetivo principal calcular la suma de todos los números naturales desde 1 hasta un número entero proporcionado por el usuario. Comienza solicitando al usuario que ingrese un número entero, luego utiliza la fórmula de la suma de una serie aritmética para calcular la suma. Finalmente, imprime el resultado junto con un mensaje informando al usuario sobre la suma de los números.
+
 ## Problema 2
 Escribir un programa que pregunte al usuario por el número de horas trabajadas y el costo por hora.
 Después debe mostrar por pantalla la paga que le corresponde.
+
+```Python
+# Solicita al usuario que ingrese el número de horas trabajadas y lo almacena en la variable 'n'
+n = int(input("Introduce el número de horas trabajadas: "))
+
+# Solicita al usuario que ingrese el costo por hora y lo almacena en la variable 'c'
+c = int(input("Introduce el costo por hora: "))
+
+# Calcula el producto de las horas trabajadas y el costo por hora y lo almacena en la variable 'mult'
+mult = n * c
+
+# Imprime en la consola la paga correspondiente, que es el resultado de la multiplicación
+print("Paga correspondida: " + str(mult))
+```
+
+Solicita al usuario que ingrese el número de horas trabajadas y el costo por hora, luego realiza el cálculo multiplicando estos dos valores. Finalmente, muestra en la consola la paga resultante.
 
 ## Problema 3
 Crea una lista de nombre + sueldo por hora + horas trabajadas de al menos seis operadores.
