@@ -272,9 +272,9 @@ Pista:
 
 ### Laberinto del Robot
 
-Este es un programa en Python que simula un robot navegando en un laberinto bidimensional. El robot inicia en la esquina superior izquierda y debe llegar a la esquina inferior derecha, evitando obstáculos colocados aleatoriamente en el laberinto.
+El robot inicia en la esquina superior izquierda y debe llegar a la esquina inferior derecha, evitando obstáculos colocados aleatoriamente en el laberinto.
 
-### Funcionalidades
+### Descripción
 
 #### 1. Generación de Laberinto
 
@@ -305,7 +305,7 @@ def imprimir_matriz(matriz):
 ```python
 def encontrar_camino(matriz, inicio, fin):
     """
-    Utiliza el algoritmo de búsqueda BFS para encontrar un camino desde 'inicio' hasta 'fin',
+    Utiliza el algoritmo de búsqueda BFS para encontrar un camino desde el 'inicio' hasta el 'fin',
     evitando obstáculos en la matriz.
     Devuelve el camino encontrado o None si no hay camino.
     """
@@ -410,29 +410,3 @@ def main():
     else:
         print("\nImposible llegar al destino")
 ```
-
-### Uso
-
-1. **Ejecución:**
-   - Ejecutar el script Python.
-
-   ```bash
-   python nombre_del_script.py
-   ```
-
-2. **Salida:**
-   - Se mostrará el laberinto con el camino del robot o un mensaje indicando que no hay un camino posible.
-
-### Requisitos
-
-- Python 3.x
-
-### Notas Adicionales
-
-- El código utiliza el algoritmo BFS para encontrar el camino más corto.
-- Se pueden ajustar las dimensiones del laberinto y otros parámetros según las necesidades.
-- El programa simula un escenario de laberinto simple y puede ser extendido para casos más complejos.
-
-Este README proporciona una visión general del código y cómo utilizarlo, con bloques de código formateados para una mejor legibilidad en GitHub.
-
-
