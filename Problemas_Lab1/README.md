@@ -182,7 +182,7 @@ print(f"Promedio de números pares: {promedio_pares}")
 print(f"Producto de números impares: {producto_impares}")
 ```
 
-Este código en Python procesa una lista de números, calculando el promedio de los números pares, así como el producto de los números impares. Utiliza variables como sum_pares, count_pares, y producto_impares para llevar a cabo estos cálculos. El código finalmente imprime la lista original de números, el promedio de los números pares y el producto de los números impares.
+La lista, denominada numeros, contiene valores enteros y se inicializan variables como sum_pares para acumular la suma de los números pares, count_pares para contar cuántos números pares hay, y producto_impares para calcular el producto de los números impares. A través de un bucle for, el programa itera sobre cada número en la lista, verificando si es par o impar. Los números pares se suman, mientras que los impares se multiplican para obtener el producto total. Finalmente, se calcula el promedio de los números pares y se imprime la lista original de números, del promedio, y del producto de los números impares.
 
 ## Problema 5
 Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generar
@@ -239,7 +239,7 @@ while True:
 
 El programa selecciona aleatoriamente un número secreto entre 1 y 10 e indica al usuario intentar adivinar el número secreto mediante un numero proporcionado. El programa verifica si la entrada es un número válido y proporciona mensajes informativos, como "demasiado bajo" o "demasiado alto", según la relación con el número secreto. El juego continúa hasta que el usuario adivina correctamente el número, momento en el cual se muestra un mensaje de felicitación junto con la cantidad de intentos realizados. El código utiliza un bucle while True para mantener el juego en curso hasta que se rompe explícitamente cuando el usuario adivina correctamente.
 
-## Problema 6(Robot explorador)
+## Problema 6 (Robot explorador)
 El programa debe generar una matriz de al menos 5x5.
 El robot inicia su camino en la posición (0,0) de la matriz y debe salir en la posición (4,4) o la
 máxima posición si se cambia el tamaño de matriz.
