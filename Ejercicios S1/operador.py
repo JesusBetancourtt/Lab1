@@ -22,5 +22,5 @@ for operador in operadores:
     # Llama a la función calcular_sueldo para obtener el sueldo a pagar
     sueldo_a_pagar = calcular_sueldo(nombre, sueldo_por_hora, horas_trabajadas)
     
-    # Imprime en la consola el sueldo que debe recibir cada operador
+    # Imprime el sueldo que debe recibir cada operador
     print(f"El operador {nombre} debe recibir un sueldo de ${sueldo_a_pagar}.")

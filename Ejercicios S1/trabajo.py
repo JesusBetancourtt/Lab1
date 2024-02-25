@@ -7,5 +7,5 @@ c = int(input("Introduce el costo por hora: "))
 # Calcula el producto de las horas trabajadas y el costo por hora y lo almacena en la variable 'mult'
 mult = n * c
 
-# Imprime en la consola la paga correspondiente, que es el resultado de la multiplicación
+# Imprime la paga correspondiente
 print("Paga correspondida: " + str(mult))
