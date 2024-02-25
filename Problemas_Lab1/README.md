@@ -153,6 +153,37 @@ Este código en Python gestiona la información de varios operadores, cada uno c
 - Calcula el promedio de los números pares y el producto de los números impares.
 - Imprime los resultados.
 
+```Python
+# Lista de números proporcionada
+numeros = [2, 7, 14, 5, 8, 11, 20, 3, 6, 9]
+
+# Inicialización de variables para realizar cálculos
+sum_pares = 0
+count_pares = 0
+producto_impares = 1
+
+# Itera sobre la lista de números
+for num in numeros:
+    # Verifica si el número es par
+    if num % 2 == 0:
+        # Si es par, se suma al total de pares y se incrementa el contador
+        sum_pares += num
+        count_pares += 1
+    else:
+        # Si es impar, se multiplica al producto de impares
+        producto_impares *= num
+
+# Calcula el promedio de los números pares
+promedio_pares = sum_pares / count_pares if count_pares > 0 else 0
+
+# Imprime la lista de números, el promedio de números pares y el producto de números impares
+print(f"Lista de números: {numeros}")
+print(f"Promedio de números pares: {promedio_pares}")
+print(f"Producto de números impares: {producto_impares}")
+```
+
+La lista, denominada numeros, contiene valores enteros y se inicializan variables como sum_pares para acumular la suma de los números pares, count_pares para contar cuántos números pares hay, y producto_impares para calcular el producto de los números impares. A través de un bucle for, el programa itera sobre cada número en la lista, verificando si es par o impar. Los números pares se suman, mientras que los impares se multiplican para obtener el producto total. Finalmente, se calcula el promedio de los números pares y se imprime la lista original de números, del promedio, y del producto de los números impares.
+
 ## Problema 5
 Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generar
 un número aleatorio entre 1 y 10, y el usuario debe intentar adivinarlo. El programa debe
@@ -167,8 +198,48 @@ Generar un número aleatorio entre 1 y 10
 numero_secreto = random.randint(1, 10)
 ```
 
+```Python
+# Importa el módulo 'random' para generar un número aleatorio
+import random
 
-## Problema 6(Robot explorador)
+# Genera un número aleatorio entre 1 y 10
+numero_secreto = random.randint(1, 10)
+
+# Inicializa el contador de intentos en 0
+intentos = 0
+
+# Imprime un mensaje de bienvenida al juego
+print("Bienvenido al juego de adivinanzas. Adivina el número secreto entre 1 y 10.")
+
+# Inicia un bucle while que continuará hasta que se adivine el número secreto
+while True:
+    try:
+        # Solicita al usuario que ingrese su adivinanza y la convierte a un número entero
+        guess = int(input("Ingresa tu adivinanza: "))
+    except ValueError:
+        # Captura la excepción si el usuario no ingresa un número válido
+        print("Por favor, ingresa un número válido.")
+        continue
+
+    # Incrementa el contador de intentos en cada iteración
+    intentos += 1
+
+    # Compara la adivinanza del usuario con el número secreto
+    if guess == numero_secreto:
+        # Imprime un mensaje de felicitaciones si la adivinanza es correcta y termina el juego
+        print(f"¡Felicidades! Adivinaste el número secreto en {intentos} intentos.")
+        break
+    elif guess < numero_secreto:
+        # Indica al usuario que el número es demasiado bajo si la adivinanza es menor que el número secreto
+        print("El número es demasiado bajo. ¡Intenta de nuevo!")
+    else:
+        # Indica al usuario que el número es demasiado alto si la adivinanza es mayor que el número secreto
+        print("El número es demasiado alto. ¡Intenta de nuevo!")
+```
+
+El programa selecciona aleatoriamente un número secreto entre 1 y 10 e indica al usuario intentar adivinar el número secreto mediante un numero proporcionado. El programa verifica si la entrada es un número válido y proporciona mensajes informativos, como "demasiado bajo" o "demasiado alto", según la relación con el número secreto. El juego continúa hasta que el usuario adivina correctamente el número, momento en el cual se muestra un mensaje de felicitación junto con la cantidad de intentos realizados. El código utiliza un bucle while True para mantener el juego en curso hasta que se rompe explícitamente cuando el usuario adivina correctamente.
+
+## Problema 6 (Robot explorador)
 El programa debe generar una matriz de al menos 5x5.
 El robot inicia su camino en la posición (0,0) de la matriz y debe salir en la posición (4,4) o la
 máxima posición si se cambia el tamaño de matriz.
@@ -196,3 +267,172 @@ Pista:
 - Flecha hacia abajo: ↓ (U+2193)
 - Flecha hacia la izquierda: ← (U+2190)
 - Flecha hacia la derecha: → (U+2192
+
+
+
+### Laberinto del Robot
+
+Este es un programa en Python que simula un robot navegando en un laberinto bidimensional. El robot inicia en la esquina superior izquierda y debe llegar a la esquina inferior derecha, evitando obstáculos colocados aleatoriamente en el laberinto.
+
+### Funcionalidades
+
+#### 1. Generación de Laberinto
+
+```python
+def generar_matriz(filas, columnas):
+    """
+    Genera una matriz cuadrada de tamaño 'filas' x 'columnas'.
+    Inicializa la matriz con 'o' (espacios libres) y coloca obstáculos 'X' de manera aleatoria.
+    Devuelve la matriz generada.
+    """
+    matriz = [['o' for _ in range(columnas)] for _ in range(filas)]
+    return matriz
+```
+
+#### 2. Impresión de la Matriz
+
+```python
+def imprimir_matriz(matriz):
+    """
+    Imprime la matriz en la consola.
+    """
+    for fila in matriz:
+        print(" ".join(map(str, fila)))
+```
+
+#### 3. Búsqueda del Camino
+
+```python
+def encontrar_camino(matriz, inicio, fin):
+    """
+    Utiliza el algoritmo de búsqueda BFS para encontrar un camino desde 'inicio' hasta 'fin',
+    evitando obstáculos en la matriz.
+    Devuelve el camino encontrado o None si no hay camino.
+    """
+    if inicio == fin:
+        return [inicio]
+
+    filas = len(matriz)
+    columnas = len(matriz[0])
+
+    visitado = set()
+    queue = [(inicio, [])]
+
+    while queue:
+        actual, ruta = queue.pop(0)
+
+        if actual == fin:
+            return ruta + [actual]
+
+        if actual in visitado:
+            continue
+
+        visitado.add(actual)
+        fila, columna = actual
+
+        # Movimientos posibles: arriba, abajo, izquierda, derecha
+        movimientos = [(fila - 1, columna), (fila + 1, columna), (fila, columna - 1), (fila, columna + 1)]
+
+        for movimiento in movimientos:
+            nueva_fila, nueva_columna = movimiento
+
+            if 0 <= nueva_fila < filas and 0 <= nueva_columna < columnas and matriz[nueva_fila][nueva_columna] != 'X':
+                queue.append(((nueva_fila, nueva_columna), ruta + [actual]))
+
+    return None
+```
+
+#### 4. Impresión del Camino en la Matriz
+
+```python
+def imprimir_camino(matriz, camino):
+    """
+    Marca el camino en la matriz con flechas indicando la dirección de movimiento.
+    Imprime la matriz con el camino en la consola.
+    """
+    for i in range(len(camino) - 1):
+        fila_actual, columna_actual = camino[i]
+        fila_siguiente, columna_siguiente = camino[i + 1]
+
+        if fila_siguiente > fila_actual:
+            matriz[fila_actual][columna_actual] = '↓'
+        elif fila_siguiente < fila_actual:
+            matriz[fila_actual][columna_actual] = '↑'
+        elif columna_siguiente > columna_actual:
+            matriz[fila_actual][columna_actual] = '→'
+        elif columna_siguiente < columna_actual:
+            matriz[fila_actual][columna_actual] = '←'
+
+    # Indicar la dirección en la posición final
+    fila_final, columna_final = camino[-1]
+    matriz[fila_final][columna_final] = '↓' if fila_final < len(matriz)-1 else '↑' if fila_final > 0 else '←' if columna_final > 0 else '→'
+
+    imprimir_matriz(matriz)
+```
+
+#### 5. Programa Principal
+
+```python
+def main():
+    """
+    Programa principal:
+    - Genera el laberinto, coloca obstáculos y posiblemente en la posición inicial.
+    - Busca un camino y lo imprime en la consola.
+    """
+    filas = 5
+    columnas = 5
+
+    matriz = generar_matriz(filas, columnas)
+    matriz = generar_obstaculos(matriz)
+
+    # Considerar la posibilidad de obstáculo en la posición inicial
+    if random.choice([True, False]):
+        matriz[0][0] = 'X'
+
+    inicio = (0, 0)
+    fin = (filas - 1, columnas - 1)
+
+    if matriz[inicio[0]][inicio[1]] == 'X' or matriz[fin[0]][fin[1]] == 'X':
+        print("Imposible llegar al destino")
+        imprimir_matriz(matriz)
+        return
+
+    camino = encontrar_camino(matriz, inicio, fin)
+
+    print("Mapa:")
+    imprimir_matriz(matriz)
+
+    if camino:
+        print("\nMapa con camino:")
+        imprimir_camino(matriz, camino)
+        print("\nRuta seguida por el robot:")
+        print(camino)
+    else:
+        print("\nImposible llegar al destino")
+```
+
+### Uso
+
+1. **Ejecución:**
+   - Ejecutar el script Python.
+
+   ```bash
+   python nombre_del_script.py
+   ```
+
+2. **Salida:**
+   - Se mostrará el laberinto con el camino del robot o un mensaje indicando que no hay un camino posible.
+
+### Requisitos
+
+- Python 3.x
+
+### Notas Adicionales
+
+- El código utiliza el algoritmo BFS para encontrar el camino más corto.
+- Se pueden ajustar las dimensiones del laberinto y otros parámetros según las necesidades.
+- El programa simula un escenario de laberinto simple y puede ser extendido para casos más complejos.
+
+Este README proporciona una visión general del código y cómo utilizarlo, con bloques de código formateados para una mejor legibilidad en GitHub.
+
+
